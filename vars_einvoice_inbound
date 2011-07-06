@@ -1,0 +1,5 @@
+DESTINATION_DIR=/infra/platform/app1/cynergy_home/work/staging/purap/electronicInvoice
+SOURCE_DIR=/infra/platform/mounts/batch_incoming
+
+#DESTINATION_DIR=/users/sdm86/scripts/kiti-2219/scratch
+#SOURCE_DIR=/users/sdm86/scripts/kiti-2219/source/
