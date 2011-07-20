@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source vars_einvoice_inbound
+source /infra/platform/app1/bin/vars_einvoice_inbound
 
 cd $SOURCE_DIR
 echo "Moving files from $SOURCE_DIR to $DESTINATION_DIR"
