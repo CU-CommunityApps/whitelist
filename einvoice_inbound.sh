@@ -18,7 +18,6 @@ for k in $WHITE_LIST;
          echo "No files in $START_DIR/$k"
        else
 	 echo "moving files"
-         touch $DESTINATION_DIR/${z%%.xml}.done;
          mv $i $DESTINATION_DIR/${z};
      fi
   done
