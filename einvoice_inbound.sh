@@ -19,7 +19,7 @@ for k in $WHITE_LIST;
      z=${i##*/}
      if [[ "$z" == "purap_einvoice_*.xml" ]]
        then
-         echo "No files in $START_DIR/$k"
+         echo "No files in $SOURCE_DIR/$k"
        else
 	 echo "moving files"
 	 if [[ -e $DESTINATION_DIR/${z} ]]
