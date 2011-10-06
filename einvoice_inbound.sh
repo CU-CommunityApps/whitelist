@@ -12,8 +12,9 @@ if [[ ! -e $DESTINATION_DIR/duplicates ]]
   mkdir $DESTINATION_DIR/duplicates
 fi
 
-for k in $WHITE_LIST;
+for line in $WHITE_LIST;
   do
+  k="$(echo $line | awk '{gsub(/^ +| +$|[[:cntrl:]]/,"" )}1')"
   for i in $SOURCE_DIR/$k/purap_einvoice_*.xml;
     do
      z=${i##*/}
@@ -24,7 +25,7 @@ for k in $WHITE_LIST;
 	 echo "moving files"
 	 if [[ -e $DESTINATION_DIR/${z} ]]
 	   then
-	     echo "A file named $z already exists in \"$SOURCE_DIR\", moving file to \"${SOURCE_DIR}duplicates\" directory"
+	     echo "A file named $z already exists in \"$SOURCE_DIR\", moving file to \"${SOURCE_DIR}/duplicates\" directory"
              mv $i $DESTINATION_DIR/duplicates/${z};
            else
              echo "File moved successfully"
